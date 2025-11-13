@@ -1,5 +1,8 @@
 package com.mekill;
 
+import lombok.Data;
+
+@Data
 public class Courses 
 {
   private int id_courses;
