@@ -1,14 +1,18 @@
 package com.mekill;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
+import java.time.LocalDate;
 
-@Getter
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
 @AllArgsConstructor
 public class Student 
 {
-  private int id_student;
-  private String name, first_name, date_naissance, email, groupe;
+  private Integer id_student;
+  private LocalDate birthday;
+  private String name, first_name, email, groupe;
   private Tutor tutor;
 }
