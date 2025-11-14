@@ -1,14 +1,12 @@
 package com.mekill;
 
-import java.time.LocalDate;
-
-import lombok.Data;
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-@Data
+@Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Tutor {
-  private String  description_link;
+public class Tutor extends User {
+  private String description_link;
 }
