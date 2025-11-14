@@ -2,16 +2,14 @@ package com.mekill;
 
 import java.time.LocalDate;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Teacher 
+public class Teacher extends User
 {
-  private int id_teacher;
-  private LocalDate birthdday;
-  private String name, firstname, email, tel_number, speciality;
+  private String speciality;
 }
