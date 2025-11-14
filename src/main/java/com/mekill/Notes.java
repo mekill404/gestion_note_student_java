@@ -6,13 +6,16 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-
 import lombok.Getter;
 import lombok.ToString;
 
-@Getter
 @ToString
 public class Notes {
+  private final Examen exam;
+  private final Student student;
+  private final List<ChangeEntry> history = new ArrayList<>();
+
+  @Getter
   public static class ChangeEntry {
     private final double value;
     private final Instant instant;
@@ -42,13 +45,17 @@ public class Notes {
     }
   }
 
-  private final Examen exam;
-  private final Student student;
-  private final List<ChangeEntry> history = new ArrayList<>();
-
   public Notes(Examen exam, Student student) {
     this.exam = exam;
     this.student = student;
+  }
+
+  public Examen getExam() {
+    return exam;
+  }
+
+  public Student getStudent() {
+    return student;
   }
 
   public List<ChangeEntry> getHistory() {
@@ -61,9 +68,9 @@ public class Notes {
 
   public double getExamGrade(Instant t) {
     return history.stream()
-      .filter(entry -> !entry.getInstant().isAfter(t))
-      .max(Comparator.comparing(ChangeEntry::getInstant))
-      .map(ChangeEntry::getValue)
-      .orElse(0.0);
+        .filter(entry -> !entry.getInstant().isAfter(t))
+        .max(Comparator.comparing(ChangeEntry::getInstant))
+        .map(ChangeEntry::getValue)
+        .orElse(0.0);
   }
 }
