@@ -2,15 +2,13 @@ package com.mekill;
 
 import java.time.LocalDate;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 public class Tutor {
-  private Integer id_tutor;
-  private LocalDate birthday;
-  private String name, firstname, email, tel_number, description_link;
+  private String  description_link;
 }
