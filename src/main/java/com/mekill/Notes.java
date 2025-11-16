@@ -63,7 +63,8 @@ public class Notes {
   }
 
   public void addNote(double newValue, String motif, Instant instant) {
-    history.add(new ChangeEntry(newValue, Instant.now(), motif));
+    Instant time = (instant != null) ? instant : Instant.now();
+    history.add(new ChangeEntry(newValue, time, motif));
   }
 
   public double getExamGrade(Instant t) {
