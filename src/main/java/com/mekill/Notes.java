@@ -62,7 +62,7 @@ public class Notes {
     return Collections.unmodifiableList(history);
   }
 
-  public void addNote(double newValue, String motif) {
+  public void addNote(double newValue, String motif, Instant instant) {
     history.add(new ChangeEntry(newValue, Instant.now(), motif));
   }
 

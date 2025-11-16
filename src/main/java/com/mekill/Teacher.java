@@ -1,13 +1,21 @@
 package com.mekill;
 
+import java.time.LocalDate;
+
 import lombok.Getter;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 
 @Getter
-@NoArgsConstructor
-@AllArgsConstructor
 public class Teacher extends User
 {
   private String speciality;
+
+  public Teacher(int id, String name, String first_name, LocalDate birthdate, String phone_number, String email, String speciality) {
+    super(id, name, first_name, birthdate, phone_number, email);
+    this.speciality = speciality;
+  }
+
+  public void setSpeciality(String speciality) {
+    this.speciality = speciality;
+  }
+
 }
