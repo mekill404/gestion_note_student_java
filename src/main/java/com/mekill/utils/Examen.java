@@ -1,4 +1,4 @@
-package com.mekill;
+package com.mekill.utils;
 
 import java.time.LocalDateTime;
 import lombok.AllArgsConstructor;
@@ -14,4 +14,5 @@ public class Examen {
   private String title;
   private Courses course;
   private LocalDateTime date_hour;
+  private Bulletin bulletin_exam;
 }

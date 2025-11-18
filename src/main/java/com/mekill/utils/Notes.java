@@ -1,10 +1,12 @@
-package com.mekill;
+package com.mekill.utils;
 
 import java.time.Instant;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+
+import com.mekill.user.Student;
 
 import lombok.Getter;
 import lombok.ToString;

@@ -13,6 +13,13 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+import com.mekill.user.Student;
+import com.mekill.user.Teacher;
+import com.mekill.user.Tutor;
+import com.mekill.utils.Courses;
+import com.mekill.utils.Examen;
+import com.mekill.utils.Notes;
+
 public class NotesTest {
   private static final List<Teacher> teachers = new ArrayList<>();
   private static final List<Notes> all_grades = new ArrayList<>();

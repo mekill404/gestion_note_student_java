@@ -1,4 +1,4 @@
-package com.mekill;
+package com.mekill.user;
 
 import java.time.LocalDate;
 
